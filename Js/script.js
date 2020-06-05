@@ -1,18 +1,19 @@
-const answers = [];
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', "");
 
-answers[0] = prompt('Куда перейти?', '');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-const category1 = 'trending'
+const a = prompt('Один из последних просмотренных фильмов?', ""),
+      b = prompt('На сколько оцениваете его?', ""),
+      c = prompt('Один из последних просмотренных фильмов?', ""),
+      d = prompt('На сколько оцениваете его?', "");
 
-if (answers[0] == 'тренды'){
-    console.log('https://www.youtube.com/feed/' + category1)
-}
+      personalMovieDB.movies[a] = b;
+      personalMovieDB.movies[c] = d;
 
-const category2 = 'subscriptions'
-if (answers[0] == 'субскрипции'){
-    console.log('https://www.youtube.com/feed/' + category2)
-}
-
-
-
-
+console.log(personalMovieDB)
